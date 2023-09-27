@@ -1,0 +1,102 @@
+System Design Documentation
+
+Messaging Service Protoype
+
+Table of Contents:-
+1 ………………………………………………………...Introduction
+2 …………………………………………………...Frontend (React)
+3 ………………………………………………….Backend (Node.js)
+4 ……………………………………………...Database (MongoDB)
+5 …………………………….Real-time Communication (Socket.io)
+6……………………………………………………………Workflow
+7 …………………………..Security and Performance Optimization:
+8………………………………………………...System Components
+8.1……………………………………………….. ………User Authentication
+8.2…………………………………………………………. User Management
+8.3…………………………………………………………………. Messaging
+8.4………………………………………………… …………..Real-time Chat
+9……………………………………………………....API Endpoints 10……………………………………………………...…Conclusion
+
+
+
+
+1. Introduction:
+
+This document outlines the system design for a messaging service prototype built using React for the frontend, Node.js for the backend, MongoDB as the database, and Socket.io for real-time communication. The messaging app allows users to create accounts, send and receive messages, and engage in real-time chat with other users.
+
+
+2. Frontend (React):
+
+The frontend is built using React, for building user interfaces. It is responsible for presenting the user interface to the users, managing user interactions, and sending/receiving messages via API calls and Socket.io.
+
+3 Backend (Node.js):
+
+The backend is implemented using Node.js, a runtime environment for executing JavaScript code on the server-side. It handles user authentication, manages user data, handles messaging logic, and serves as the intermediary between the frontend and the database.
+
+4 Database (MongoDB):
+
+MongoDB, a NoSQL database, is used to store user account information, chat messages, and related data. It provides flexibility for storing structured and unstructured data.
+
+5 Real-time Communication (Socket.io):
+
+Socket.io is used for real-time communication between the server and clients. It enables instant message delivery and chat functionality by maintaining WebSocket connections.
+
+
+
+6. Workflow:
+
+The development workflow for this messaging app followed a front-end first approach, with the frontend and backend being built incrementally and iteratively:
+
+Frontend Development
+
+Frontend development began by creating the user interface (UI) using React components.
+User authentication and registration forms were implemented, allowing users to interact with the app's frontend.
+Dummy data or mock API calls were used to simulate backend functionality during frontend development. This was done using postman application.
+Real-time chat components were created using Socket.io for testing.
+
+Backend Development
+
+Backend development started building the Node.js server and defining API endpoints based on the requirements mentioned in the frontend codes.
+Authentication and authorization logic was implemented using JWT.
+NoSQL Database schemas were defined, and MongoDB was integrated.
+API endpoints for user management, messaging, and real-time chat were implemented.
+
+7. Security and Performance Optimization:
+
+Security measures, such as input validation and encryption, were implemented to secure the application. Nodemailer method was used to send otp’s to new registered emails and also during the event of forgotten password .
+
+
+8. System Components:
+
+8.1 User Authentication:
+
+Users can register, login, and logout.
+Passwords are securely hashed and stored in the database.
+JWT (JSON Web Tokens) are used for authentication and authorization.
+
+8.2 User Management
+
+
+User data is stored in the MongoDB database in encrypted format.
+
+8.3 Messaging
+
+Users can send and receive messages to/from other users.
+Messages are stored in the database with sender and receiver information.
+
+8.4 Real-time Chat
+
+Real-time chat functionality is implemented using Socket.io.
+
+
+9. API Endpoints:
+
+http://localhost:300/auth/register: Register a new user.
+http://localhost:300/auth/login: Authenticate and log in a user.
+
+
+10. Conclusion:
+
+This system design documentation provides an overview of the components, data models, some API endpoints, and security considerations for the messaging app. The front-end-first development approach allowed for incremental development and integration with the backend. The combination of React, Node.js, MongoDB, and Socket.io enables real-time messaging and a scalable, secure user experience. Future enhancements can include additional features like multimedia messaging, integrating an chat-bot and notifications.
+
+
